@@ -375,7 +375,7 @@ class SubmissionsController {
                         throw new SubmissionNotFoundError(submissionId);
                     }
                 })
-                .tap((submission) => this._storage.remove(submission.id))
+                //.tap((submission) => this._storage.remove(submission.id))
                 .then((submission) => {
                     submission.score = score;
                     submission.status = 'VALID';
